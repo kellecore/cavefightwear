@@ -8,14 +8,68 @@ import { Button } from '@/components/ui/button';
 import ProductCard from '@/components/ProductCard';
 import { getFeaturedProducts } from '@/lib/data';
 
+// Snow Particle Component
+function SnowParticles() {
+  const [particles, setParticles] = useState<Array<{ id: number; left: number; delay: number; duration: number; size: number; opacity: number }>>([]);
+
+  useEffect(() => {
+    const newParticles = Array.from({ length: 50 }, (_, i) => ({
+      id: i,
+      left: Math.random() * 100,
+      delay: Math.random() * 5,
+      duration: 8 + Math.random() * 12,
+      size: 2 + Math.random() * 4,
+      opacity: 0.1 + Math.random() * 0.3,
+    }));
+    setParticles(newParticles);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute rounded-full bg-white"
+          style={{
+            left: `${particle.left}%`,
+            width: particle.size,
+            height: particle.size,
+            opacity: particle.opacity,
+          }}
+          initial={{ y: -20, x: 0 }}
+          animate={{
+            y: ['0vh', '100vh'],
+            x: [0, Math.sin(particle.id) * 30, 0],
+          }}
+          transition={{
+            y: {
+              duration: particle.duration,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: particle.delay,
+            },
+            x: {
+              duration: particle.duration / 2,
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut',
+              delay: particle.delay,
+            },
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 // Interactive Gradient Background Component
 function InteractiveGradient() {
   const containerRef = useRef<HTMLDivElement>(null);
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
 
-  const smoothX = useSpring(mouseX, { stiffness: 50, damping: 20 });
-  const smoothY = useSpring(mouseY, { stiffness: 50, damping: 20 });
+  const smoothX = useSpring(mouseX, { stiffness: 30, damping: 30 });
+  const smoothY = useSpring(mouseY, { stiffness: 30, damping: 30 });
 
   const [mounted, setMounted] = useState(false);
 
@@ -61,6 +115,7 @@ function InteractiveGradient() {
           left: `calc(${smoothX.get() * 100}%)`,
           top: `calc(${smoothY.get() * 100}%)`,
         }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
       />
 
       {/* Secondary purple gradient blob */}
@@ -75,6 +130,7 @@ function InteractiveGradient() {
           right: `calc(${smoothX.get() * 50}%)`,
           bottom: `calc(${smoothY.get() * 50}%)`,
         }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
       />
 
       {/* Animated floating orbs */}
@@ -88,7 +144,7 @@ function InteractiveGradient() {
           y: [0, -50, 0],
         }}
         transition={{
-          duration: 8,
+          duration: 12,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
@@ -116,6 +172,9 @@ function InteractiveGradient() {
 
       {/* Vignette effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.6)_100%)]" />
+
+      {/* Snow particles */}
+      <SnowParticles />
     </div>
   );
 }
@@ -146,23 +205,23 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8"
               >
                 <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
-                <span className="text-sm text-gray-300 uppercase tracking-wider">YENİ KOLEKSİYON 2025</span>
+                <span className="text-sm text-gray-300 uppercase tracking-wider">WEBSITE AI YAPILARAK GELISTIRILDI | VIBE CODING</span>
               </motion.div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-wider">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-wider leading-[1.1]">
                 <motion.span
-                  className="text-white block"
+                  className="text-white block pb-2"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
+                  transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' }}
                 >
                   SAVAŞÇININ
                 </motion.span>
                 <motion.span
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-600 to-orange-500 block"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-600 to-orange-500 block pt-2"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 }}
+                  transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
                 >
                   TERCİHİ
                 </motion.span>

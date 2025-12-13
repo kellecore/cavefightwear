@@ -42,9 +42,9 @@ const footerLinks = [
     {
         title: 'Destek',
         links: [
-            { label: 'Sıkça Sorulan Sorular', href: '#' },
-            { label: 'Kargo & İade', href: '#' },
-            { label: 'Gizlilik Politikası', href: '#' },
+            { label: 'Gizlilik Politikası', href: '/gizlilik' },
+            { label: 'Kullanım Şartları', href: '/kullanim-sartlari' },
+            { label: 'İletişim', href: '/iletisim' },
         ],
     },
 ];
@@ -123,11 +123,11 @@ export default function Footer() {
                         © 2025 Cave Fightwear. Tüm hakları saklıdır.
                     </p>
                     <div className="flex items-center space-x-4 mt-4 md:mt-0">
-                        <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                        <Link href="/kullanim-sartlari" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                             Kullanım Şartları
                         </Link>
                         <span className="text-muted-foreground">•</span>
-                        <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                        <Link href="/gizlilik" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                             Gizlilik
                         </Link>
                     </div>
