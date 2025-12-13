@@ -4,11 +4,18 @@
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=for-the-badge&logo=tailwindcss)
+![Vibe Coding](https://img.shields.io/badge/Vibe-Coding-8b5cf6?style=for-the-badge)
 [![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=vercel)](https://cavefightwear.vercel.app/)
 
 **Cave Fightwear**, dövüş sporları tutkunları için tasarlanmış, modern ve performans odaklı bir e-ticaret platformudur. Next.js 15, TypeScript ve Tailwind CSS teknolojileri ile geliştirilmiştir.
 
 🔗 **Canlı Proje:** [https://cavefightwear.vercel.app/](https://cavefightwear.vercel.app/)
+
+---
+
+## ⚡ Vibe Coding Project
+
+Bu proje bir **Vibe Coding** eseridir. Akışına bırakılarak, anın ritmiyle ve tutkuyla kodlanmıştır. 🎧
 
 ---
 
@@ -39,7 +46,7 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleye
 
 1. **Repoyu klonlayın:**
    ```bash
-   git clone https://github.com/kullaniciadi/cave-fightwear.git
+   git clone https://github.com/kellecore/cave-fightwear.git
    cd cave-fightwear
    ```
 
@@ -77,12 +84,16 @@ cave-fightwear/
 
 ## 📞 İletişim & Sosyal Medya
 
-Bizimle iletişime geçmek ve güncellemelerden haberdar olmak için:
+> ⚠️ **Önemli Not:** Aşağıda listelenen sosyal medya hesapları **Cave Fightwear** markasına aittir.
 
 - 📸 [Instagram](https://www.instagram.com/cavefw)
 - 🎬 [YouTube](https://www.youtube.com/@cavefightwear)
 - 🐦 [X (Twitter)](https://x.com/cavefw)
 - 🌐 [Web Sitesi](https://cavefightwear.vercel.app/)
+
+### 👨‍💻 Geliştirici
+
+[![Discord](https://img.shields.io/badge/Discord-Profile-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/1386443693401309256)
 
 ---
 
