@@ -13,6 +13,8 @@ const navLinks = [
     { href: '/magaza', label: 'Mağaza' },
     { href: '/hikayemiz', label: 'Hikayemiz' },
     { href: '/iletisim', label: 'İletişim' },
+    { href: '/gizlilik', label: 'Gizlilik' },
+    { href: '/kullanim-sartlari', label: 'Kullanım Şartları' },
 ];
 
 export default function Header() {
@@ -35,8 +37,8 @@ export default function Header() {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                        ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-lg'
-                        : 'bg-transparent'
+                    ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-lg'
+                    : 'bg-transparent'
                     }`}
             >
                 <div className="container mx-auto px-4">
@@ -69,27 +71,32 @@ export default function Header() {
 
                         {/* Right Side Actions */}
                         <div className="flex items-center space-x-4">
-                            {/* Cart Button */}
-                            <Button
-                                variant="ghost"
-                                size="icon"
-                                className="relative"
-                                onClick={openCart}
+                            {/* Cart Button - Daha Görünür */}
+                            <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.95 }}
                             >
-                                <ShoppingBag className="h-5 w-5" />
-                                <AnimatePresence>
-                                    {totalItems > 0 && (
-                                        <motion.span
-                                            initial={{ scale: 0 }}
-                                            animate={{ scale: 1 }}
-                                            exit={{ scale: 0 }}
-                                            className="absolute -top-1 -right-1 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold"
-                                        >
-                                            {totalItems}
-                                        </motion.span>
-                                    )}
-                                </AnimatePresence>
-                            </Button>
+                                <Button
+                                    variant="default"
+                                    size="icon"
+                                    className="relative bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all"
+                                    onClick={openCart}
+                                >
+                                    <ShoppingBag className="h-5 w-5" />
+                                    <AnimatePresence>
+                                        {totalItems > 0 && (
+                                            <motion.span
+                                                initial={{ scale: 0 }}
+                                                animate={{ scale: 1 }}
+                                                exit={{ scale: 0 }}
+                                                className="absolute -top-2 -right-2 bg-white text-red-600 text-xs w-6 h-6 rounded-full flex items-center justify-center font-bold border-2 border-red-600"
+                                            >
+                                                {totalItems}
+                                            </motion.span>
+                                        )}
+                                    </AnimatePresence>
+                                </Button>
+                            </motion.div>
 
                             {/* Mobile Menu Button */}
                             <Button
