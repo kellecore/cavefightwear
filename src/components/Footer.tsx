@@ -120,7 +120,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between">
                     <p className="text-sm text-muted-foreground">
-                        © 2024 Cave Fightwear. Tüm hakları saklıdır.
+                        © 2025 Cave Fightwear. Tüm hakları saklıdır.
                     </p>
                     <div className="flex items-center space-x-4 mt-4 md:mt-0">
                         <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
