@@ -146,7 +146,7 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8"
               >
                 <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
-                <span className="text-sm text-gray-300 uppercase tracking-wider">Premium Fightwear</span>
+                <span className="text-sm text-gray-300 uppercase tracking-wider">BU PROJE AI ILE VIBE CODING YAPILARAK GELISTIRILDI</span>
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-wider">
