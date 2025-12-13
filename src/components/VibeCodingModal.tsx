@@ -9,6 +9,9 @@ export default function VibeCodingModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+    // SSR kontrolü - localStorage sadece client-side'da çalışır
+    if (typeof window === 'undefined') return;
+
     const hasSeenModal = localStorage.getItem('vibe-coding-seen');
     if (!hasSeenModal) {
       // Biraz gecikmeli gelsin ki site yüklendikten sonra 'bam' diye çıkmasın
@@ -56,17 +59,17 @@ export default function VibeCodingModal() {
               </div>
 
               <h2 className="text-2xl font-bold tracking-tight">Vibe Coding Project</h2>
-              
+
               <p className="text-white/80 leading-relaxed">
                 Bu platform, <span className="font-semibold text-white">Yapay Zeka</span> ve insan yaratıcılığının birleşimiyle, anın ritmine kapılarak kodlanmıştır.
               </p>
-              
+
               <div className="flex items-center gap-2 rounded-full bg-white/5 px-4 py-1.5 text-xs font-medium text-white/60 ring-1 ring-white/10">
                 <Cpu className="h-3 w-3" />
                 <span>AI Powered Development</span>
               </div>
 
-              <Button 
+              <Button
                 onClick={handleClose}
                 className="mt-4 w-full bg-white text-black hover:bg-white/90 font-semibold transition-transform active:scale-95"
               >
@@ -75,7 +78,7 @@ export default function VibeCodingModal() {
             </div>
 
             {/* Kapat butonu */}
-            <button 
+            <button
               onClick={handleClose}
               className="absolute top-4 right-4 rounded-full p-1 text-white/50 hover:bg-white/10 hover:text-white transition-colors"
             >
