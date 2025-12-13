@@ -82,6 +82,22 @@ cave-fightwear/
 
 ---
 
+## 🔒 Admin Paneli (Bakım Modu)
+
+> ⚠️ **Admin paneli şu anda güvenlik nedeniyle geçici olarak devre dışıdır.**
+
+Admin panelini tekrar aktif etmek için:
+
+1. `src/app/admin/page.tsx` dosyasını açın
+2. `const ADMIN_ENABLED = false;` satırını bulun
+3. `false` değerini `true` olarak değiştirin:
+   ```tsx
+   const ADMIN_ENABLED = true;
+   ```
+4. Değişiklikleri kaydedin ve deploy edin
+
+---
+
 ## 📞 İletişim & Sosyal Medya
 
 > ⚠️ **Önemli Not:** Aşağıda listelenen sosyal medya hesapları **Cave Fightwear** markasına aittir.
