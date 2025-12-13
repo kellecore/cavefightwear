@@ -15,7 +15,7 @@
 
 ## ⚡ Vibe Coding Project
 
-Bu proje bir **Vibe Coding** eseridir. Akışına bırakılarak, anın ritmiyle ve tutkuyla kodlanmıştır. 🎧
+Bu proje bir **Vibe Coding** eseridir. Yapay zeka (AI) desteğiyle, akışına bırakılarak, anın ritmiyle ve tutkuyla kodlanmıştır. 🎧🤖
 
 ---
 
