@@ -3,6 +3,7 @@ import { Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import VibeCodingModal from "@/components/VibeCodingModal";
 
 const oswald = Oswald({
   variable: "--font-oswald",
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${oswald.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
+        <VibeCodingModal />
         <Header />
         <main className="flex-1 pt-20">
           {children}
