@@ -9,7 +9,7 @@
 
 **Cave Fightwear**, dövüş sporları tutkunları için tasarlanmış, modern ve performans odaklı bir e-ticaret platformudur. Next.js 15, TypeScript ve Tailwind CSS teknolojileri ile geliştirilmiştir.
 
-🔗 **Canlı Proje:** [https://cavefightwear.vercel.app/](https://cavefightwear.vercel.app/)
+🔗 **Canlı Proje:** [https://cavefightwear.vercel.app/](https://cavefightwear.onrender.com)
 
 ---
 
