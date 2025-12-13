@@ -5,11 +5,11 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8?style=for-the-badge&logo=tailwindcss)
 ![Vibe Coding](https://img.shields.io/badge/Vibe-Coding-8b5cf6?style=for-the-badge)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=vercel)](https://cavefightwear.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=vercel)](https://cavefightwear.onrender.com/)
 
 **Cave Fightwear**, dövüş sporları tutkunları için tasarlanmış, modern ve performans odaklı bir e-ticaret platformudur. Next.js 15, TypeScript ve Tailwind CSS teknolojileri ile geliştirilmiştir.
 
-🔗 **Canlı Proje:** [https://cavefightwear.vercel.app/](https://cavefightwear.onrender.com)
+🔗 **Canlı Proje:** [https://cavefightwear.onrender.com/](https://cavefightwear.onrender.com)
 
 ---
 
