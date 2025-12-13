@@ -151,7 +151,7 @@ Uyuşmazlık durumunda İstanbul Mahkemeleri ve İcra Daireleri yetkilidir.`,
                         viewport={{ once: true }}
                         className="text-center mt-8 text-muted-foreground"
                     >
-                        <p>Son güncelleme: Aralık 2024</p>
+                        <p>Son güncelleme: Aralık 2025</p>
                     </motion.div>
                 </div>
             </section>

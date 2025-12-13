@@ -28,27 +28,27 @@ const values = [
 
 const timeline = [
     {
-        year: '2020',
+        year: '2025',
         title: 'Başlangıç',
         description: 'Cave Fightwear, dövüş sporlarına olan tutkudan doğdu.',
     },
     {
-        year: '2021',
+        year: '2025',
         title: 'İlk Koleksiyon',
         description: 'Premium rashguard ve aksesuar serimizi piyasaya sürdük.',
     },
     {
-        year: '2022',
+        year: '2025',
         title: 'Büyüme',
         description: 'Türkiye genelinde 1000+ savaşçıya ulaştık.',
     },
     {
-        year: '2023',
+        year: '2025',
         title: 'Genişleme',
         description: 'Ürün yelpazemizi genişlettik ve uluslararası pazara açıldık.',
     },
     {
-        year: '2024',
+        year: '2025',
         title: 'Bugün',
         description: 'Cave ailesi olarak büyümeye devam ediyoruz.',
     },

@@ -10,16 +10,17 @@ import { getFeaturedProducts } from '@/lib/data';
 
 // Snow Particle Component
 function SnowParticles() {
-  const [particles, setParticles] = useState<Array<{ id: number; left: number; delay: number; duration: number; size: number; opacity: number }>>([]);
+  const [particles, setParticles] = useState<Array<{ id: number; left: number; delay: number; duration: number; size: number; opacity: number; startY: number }>>([]);
 
   useEffect(() => {
     const newParticles = Array.from({ length: 50 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
-      delay: Math.random() * 5,
-      duration: 8 + Math.random() * 12,
+      delay: Math.random() * 3,
+      duration: 10 + Math.random() * 15,
       size: 2 + Math.random() * 4,
       opacity: 0.1 + Math.random() * 0.3,
+      startY: -10 - Math.random() * 20, // Start from -10vh to -30vh (above screen)
     }));
     setParticles(newParticles);
   }, []);
@@ -32,14 +33,14 @@ function SnowParticles() {
           className="absolute rounded-full bg-white"
           style={{
             left: `${particle.left}%`,
+            top: `${particle.startY}vh`,
             width: particle.size,
             height: particle.size,
             opacity: particle.opacity,
           }}
-          initial={{ y: -20, x: 0 }}
           animate={{
-            y: ['0vh', '100vh'],
-            x: [0, Math.sin(particle.id) * 30, 0],
+            y: ['0vh', '120vh'],
+            x: [0, Math.sin(particle.id) * 20, 0],
           }}
           transition={{
             y: {

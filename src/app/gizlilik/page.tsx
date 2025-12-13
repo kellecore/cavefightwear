@@ -132,7 +132,7 @@ export default function GizlilikPage() {
                         viewport={{ once: true }}
                         className="text-center mt-12 text-muted-foreground"
                     >
-                        <p>Son güncelleme: Aralık 2024</p>
+                        <p>Son güncelleme: Aralık 2025</p>
                     </motion.div>
                 </div>
             </section>

@@ -74,10 +74,10 @@ export const adminAnalytics = {
     totalProducts: 2,
     totalCustomers: 38,
     recentOrders: [
-        { id: 'ORD-001', customer: 'Ahmet Y.', product: 'Cave Maske', amount: 450, date: '2024-01-15' },
-        { id: 'ORD-002', customer: 'Mehmet K.', product: 'Cave Rashguard', amount: 850, date: '2024-01-14' },
-        { id: 'ORD-003', customer: 'Ali B.', product: 'Cave Maske', amount: 450, date: '2024-01-13' },
-        { id: 'ORD-004', customer: 'Fatma S.', product: 'Cave Rashguard', amount: 850, date: '2024-01-12' },
-        { id: 'ORD-005', customer: 'Zeynep A.', product: 'Cave Maske', amount: 450, date: '2024-01-11' },
+        { id: 'ORD-001', customer: 'Ahmet Y.', product: 'Cave Maske', amount: 450, date: '2025-01-15' },
+        { id: 'ORD-002', customer: 'Mehmet K.', product: 'Cave Rashguard', amount: 850, date: '2025-01-14' },
+        { id: 'ORD-003', customer: 'Ali B.', product: 'Cave Maske', amount: 450, date: '2025-01-13' },
+        { id: 'ORD-004', customer: 'Fatma S.', product: 'Cave Rashguard', amount: 850, date: '2025-01-12' },
+        { id: 'ORD-005', customer: 'Zeynep A.', product: 'Cave Maske', amount: 450, date: '2025-01-11' },
     ],
 };
