@@ -138,11 +138,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Oswald', system-ui, sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Oswald', system-ui, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -172,10 +179,86 @@
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Selection Color */
 ::selection {
   background: oklch(0.577 0.245 27.325 / 40%);
   color: white;
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GPU Acceleration for animated elements */
+.animate-pulse,
+.animate-spin,
+.animate-bounce {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+
+  /* Reduce blur on mobile for better performance */
+  .blur-lg {
+    filter: blur(20px);
+  }
+
+  .blur-xl {
+    filter: blur(30px);
+  }
+
+  .blur-2xl {
+    filter: blur(40px);
+  }
+
+  /* Optimize backdrop blur on mobile */
+  .backdrop-blur-md {
+    backdrop-filter: blur(8px);
+  }
+
+  .backdrop-blur-lg {
+    backdrop-filter: blur(12px);
+  }
+
+  /* Better touch targets */
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Smooth scrolling container */
+  .overflow-y-auto,
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Faster transitions on mobile */
+@media (max-width: 768px) and (hover: none) {
+  * {
+    transition-duration: 0.15s !important;
+  }
+}
+
+/* Hero section mobile optimizations */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingBag, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -23,13 +23,35 @@ export default function Header() {
     const { items, openCart } = useCartStore();
     const totalItems = items.reduce((acc, item) => acc + item.quantity, 0);
 
+    // Optimized scroll handler with debounce
+    const handleScroll = useCallback(() => {
+        const scrolled = window.scrollY > 50;
+        if (scrolled !== isScrolled) {
+            setIsScrolled(scrolled);
+        }
+    }, [isScrolled]);
+
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+        let ticking = false;
+
+        const scrollListener = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
         };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+
+        window.addEventListener('scroll', scrollListener, { passive: true });
+        return () => window.removeEventListener('scroll', scrollListener);
+    }, [handleScroll]);
+
+    // Close mobile menu on navigation
+    const handleLinkClick = () => {
+        setIsMobileMenuOpen(false);
+    };
 
     return (
         <>
@@ -42,13 +64,13 @@ export default function Header() {
                     }`}
             >
                 <div className="container mx-auto px-4">
-                    <div className="flex items-center justify-between h-20">
-                        {/* Logo */}
+                    <div className="flex items-center justify-between h-16 md:h-20">
+                        {/* Logo - Smaller on mobile */}
                         <Link href="/" className="flex items-center space-x-2">
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="text-2xl md:text-3xl font-bold tracking-wider"
+                                className="text-xl md:text-2xl lg:text-3xl font-bold tracking-wider"
                             >
                                 <span className="text-white">CAVE</span>
                                 <span className="text-red-600"> FIGHTWEAR</span>

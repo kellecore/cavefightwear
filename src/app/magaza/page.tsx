@@ -74,12 +74,12 @@ export default function ShopPage() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-12"
+                    className="text-center mb-8 md:mb-12"
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
                         <span className="text-white">MAĞAZA</span>
                     </h1>
-                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
                         Premium dövüş sporları ekipmanları koleksiyonumuzu keşfedin.
                     </p>
                 </motion.div>
@@ -200,7 +200,7 @@ export default function ShopPage() {
 
                 {/* Products Grid */}
                 {filteredProducts.length > 0 ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
                         {filteredProducts.map((product, index) => (
                             <ProductCard key={product.id} product={product} index={index} />
                         ))}

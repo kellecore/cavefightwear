@@ -60,24 +60,24 @@ const socialIcons = [
 export default function Footer() {
     return (
         <footer className="bg-card border-t border-border">
-            <div className="container mx-auto px-4 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+            <div className="container mx-auto px-4 py-10 md:py-16">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12">
                     {/* Brand Section */}
-                    <div className="lg:col-span-2">
-                        <Link href="/" className="inline-block mb-6">
+                    <div className="col-span-2 lg:col-span-2">
+                        <Link href="/" className="inline-block mb-4 md:mb-6">
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
-                                className="text-2xl font-bold tracking-wider"
+                                className="text-xl md:text-2xl font-bold tracking-wider"
                             >
                                 <span className="text-white">CAVE</span>
                                 <span className="text-red-600"> FIGHTWEAR</span>
                             </motion.div>
                         </Link>
-                        <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
+                        <p className="text-muted-foreground mb-4 md:mb-6 max-w-md leading-relaxed text-sm md:text-base">
                             Dövüş sporları tutkunları için tasarlanmış premium ekipman ve giyim. Kalite, dayanıklılık ve stil bir arada.
                         </p>
-                        {/* Social Links */}
-                        <div className="flex items-center space-x-4">
+                        {/* Social Links - Larger touch targets on mobile */}
+                        <div className="flex items-center space-x-3 md:space-x-4">
                             {socialIcons.map((social) => (
                                 <motion.a
                                     key={social.label}
@@ -86,7 +86,7 @@ export default function Footer() {
                                     rel="noopener noreferrer"
                                     whileHover={{ scale: 1.1, y: -2 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-red-600 transition-colors"
+                                    className="w-11 h-11 md:w-10 md:h-10 rounded-full bg-secondary flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-red-600 transition-colors active:bg-red-700"
                                     aria-label={social.label}
                                 >
                                     <social.icon className="w-5 h-5" />

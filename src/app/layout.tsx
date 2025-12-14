@@ -29,12 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr" className="dark">
+    <html lang="tr" className="dark" suppressHydrationWarning>
       <body
         className={`${oswald.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="flex-1 pt-20">
+        <main className="flex-1 pt-16 md:pt-20">
           {children}
         </main>
         <Footer />

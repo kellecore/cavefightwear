@@ -53,7 +53,7 @@ export default function AdminPage() {
                         >
                             <div className="flex items-center justify-center gap-2 text-yellow-500">
                                 <AlertTriangle className="w-5 h-5" />
-                                <span className="font-medium">Geçici Olarak Devre Dışı</span>
+                                <span className="font-medium">Site demo olduğu için admin paneli kapalıdır -kelle</span>
                             </div>
                         </motion.div>
 
